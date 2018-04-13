@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	background-color: #16365D;
+	width: 95%;
+	margin: auto;
+}
+
+header {
+	width: auto;
+	height: 300vh;
+
+	/* background-image: url('../img/Logo_vertical.png'); */
+}
+
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
+}
