@@ -6,6 +6,7 @@
 
 html {
 	box-sizing: border-box;
+	background-color: #16365D;
 }
 
 *, *::before, *::after {
@@ -13,16 +14,14 @@ html {
 }
 
 body {
-	background-color: #16365D;
 	width: 95%;
 	margin: auto;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 
-header {
-	width: auto;
-	height: 300vh;
-
-	/* background-image: url('../img/Logo_vertical.png'); */
+li {
+	font: 2em 'Trirong', serif;
+	line-height: 1.4;
 }
 
 .visuallyhidden {
@@ -35,4 +34,15 @@ header {
 	position: absolute;
 	width: 1px;
 	white-space: nowrap;
+}
+
+/*************** Column 1 (business info) ***************/
+header {
+	width: auto;
+	height: 300vh;
+}
+
+header img {
+	margin-top: 25%;
+	max-width: 500px;
 }
