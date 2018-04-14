@@ -38,7 +38,7 @@ header {
 }
 
 header img {
-	margin-top: 20%;
+	margin-top: 25%;
 	width: 100%;
 }
 
@@ -46,7 +46,7 @@ header > p:first-of-type {
 	padding-top: 5%;
 	text-align: center;
 	font: italic 300 1em 'Roboto Condensed', sans-serif;
-	color: #FFF200;
+	color: white;
 }
 
 nav li {
@@ -72,12 +72,11 @@ nav::before, nav::after {
 	border-bottom: 0.25px solid white;
 } */
 
-/***** Address *****/
 #contactinfo {
 	text-align: center;
 	color: #FFF200;
 	font: 300 1.5em 'Roboto Condensed', sans-serif;
-	padding: 10% 0 17% 0;
+	padding: 17% 0 17% 0;
 }
 
 /***** Phone number *****/
@@ -87,6 +86,14 @@ nav::before, nav::after {
 	font-size: 1.5em;
 	letter-spacing: 0.1em;
 }
+
+#hours::before, #hours::after {
+	content: "";
+	display: block;
+	margin: 0 auto;
+	width: 80%;
+	padding: 3%;
+	border-bottom: 0.25px solid white;}
 
 #hours :not(#sideNote) {
 	text-align: center;
