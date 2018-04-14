@@ -53,8 +53,9 @@ nav li {
 	font: 500 1.5em 'Trirong', serif;
 	color: white;
 	text-align: center;
-	padding-top:3%;
+	padding-top: 3%;
 	letter-spacing: 0.1em;
+	list-style: none;
 }
 
 a {
@@ -94,6 +95,7 @@ nav::before, nav::after {
 }
 
 #sideNote {
+	text-decoration: none;
 	text-align: center;
 	padding: 5% 0 5% 0;
 	color: #FFF200;

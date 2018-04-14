@@ -3,10 +3,8 @@ $(document).ready(function () {
     //Using jQuery: $('<p id="sideNote">Check out our Facebook page for last minute changes!</p>').insertBefore('#hours');
 
     var checkMe = document.createElement('p');
-    var hoursFirst = document.getElementById('hours');
 
     checkMe.id = 'sideNote';
-    checkMe.innerText = 'Check out our Facebook page for last minute changes!';
-    hoursFirst.insertBefore(checkMe, hoursFirst.childNodes[0]);
-
+    checkMe.innerText = '(Last orders taken 15 min before close)';
+    document.getElementById('hours').appendChild(checkMe);
 });
