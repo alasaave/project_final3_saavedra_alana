@@ -16,7 +16,7 @@ html {
 body {
 	width: 95%;
 	margin: auto;
-	font-family: 'Roboto Condensed', sans-serif;
+	font: 400 1em 'Roboto Condensed', sans-serif;
 }
 
 .visuallyhidden {
@@ -33,20 +33,27 @@ body {
 
 /*************** Column 1 (business info) ***************/
 header {
-	width: auto;
-	height: 300vh;
+	width: auto 0;
+	height: 100vh;
 }
 
 header img {
-	margin-top: 25%;
-	max-width: 500px;
+	margin-top: 20%;
+	width: 100%;
+}
+
+header > p:first-of-type {
+	padding-top: 5%;
+	text-align: center;
+	font: italic 300 1em 'Roboto Condensed', sans-serif;
+	color: #FFF200;
 }
 
 nav li {
-	font: 400 2em 'Trirong', serif;
-	line-height: 1.5;
+	font: 500 1.5em 'Trirong', serif;
 	color: white;
 	text-align: center;
+	padding-top:3%;
 	letter-spacing: 0.1em;
 }
 
@@ -54,28 +61,41 @@ a {
 	text-decoration: none;
 }
 
-nav:first-of-type {
-	content: ""; /* This is necessary for the pseudo element to work. */
-	padding-top: 5%;
-}
-
-nav::before {
-	content: ""; /* This is necessary for the pseudo element to work. */
-	display: block; /* This will put the pseudo element on its own line. */
-	margin: 0 auto; /* This will center the border. */
+nav::before, nav::after {
+	content: "";
+	display: block;
+	margin: 0 auto;
 	width: 80%;
-	padding-bottom: 20px; /* This creates some space between the element and the border. */
+	padding: 3%;
 	border-bottom: 0.25px solid white;
 }
 
+/***** Address *****/
 #contactinfo {
 	text-align: center;
 	color: #FFF200;
-	font: 700 1.4em'Roboto Condensed', sans-serif;
-	padding: 5% 0 10% 0;
-
+	font: 300 1.5em 'Roboto Condensed', sans-serif;
+	padding: 10% 0 17% 0;
 }
 
-#contactinfo :nth-child(-n+2) {
-	font-weight: 500;
+/***** Phone number *****/
+#contactinfo :first-of-type {
+	font-weight: 700;
+	padding-bottom: 2%;
+	font-size: 1.5em;
+	letter-spacing: 0.1em;
+}
+
+#hours :not(#sideNote) {
+	text-align: center;
+	font: 300 1.5em 'Roboto Condensed', sans-serif;
+	color: black;
+	letter-spacing: 0.1em;
+}
+
+#sideNote {
+	text-align: center;
+	padding: 5% 0 5% 0;
+	color: #FFF200;
+	font-size: 0.875em;
 }
