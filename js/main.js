@@ -7,4 +7,8 @@ $(document).ready(function () {
     checkMe.id = 'sideNote';
     checkMe.innerText = '(Last orders taken 15 min before close)';
     document.getElementById('hours').appendChild(checkMe);
+
+    //Call Hamburger Menu
+    $.fatNav();
+
 });
