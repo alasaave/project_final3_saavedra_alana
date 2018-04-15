@@ -58,7 +58,14 @@ nav li, h2 {
 	list-style: none;
 }
 
-h6 {
+h3 {
+	text-align: center;
+	font: 300 1.5em 'Roboto Condensed', sans-serif;
+	color: white;
+	letter-spacing: 0.1em;
+}
+
+.finePrint {
 	font: 400 0.75em 'Trirong', serif;
 	color: white;
 	text-align: center;
@@ -119,15 +126,15 @@ nav::before, nav::after {
 
 /***** Hamburger menu *****/
 .hamburger {
-	background-color:#16365D;
+	background-color: #16365D;
 	display: block;
 	width: 50px;
 	height: 50px;
 	position: fixed;
 	top: 0;
 	left: 0;
+	padding: 5% 7% 5% 5%;
 	z-index: 10000;
-	padding: 5% 0 0 3%;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -254,7 +261,7 @@ nav::before, nav::after {
 
 /*************** End Column 1 (business info) ***************/
 
-/*************** Menu Start ***************/
+/*************** Menu/Column 2 Start ***************/
 .menuGrid {
 	display: flex;
 	flex-wrap: wrap;
@@ -275,7 +282,24 @@ nav::before, nav::after {
 	font-weight: 700;
 }
 
-/*************** Menu End ***************/
+/*************** Menu/Column 2 End ***************/
+
+/*************** Specials Start ***************/
+main::after {
+	content: "";
+	display: block;
+	margin: 0 auto;
+	width: 80%;
+	padding: 3%;
+	border-bottom: 0.25px solid white;
+}
+
+/* Multilevel li */
+ul li ul {
+	color: red;
+}
+
+/*************** Specials End ***************/
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media (min-width: 600px) {
