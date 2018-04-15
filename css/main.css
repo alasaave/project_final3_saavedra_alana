@@ -32,7 +32,7 @@ body {
 }
 
 /*************** Column 1 (business info) ***************/
-header {
+header main {
 	width: auto 0;
 	height: 100vh;
 }
@@ -42,7 +42,7 @@ header img {
 	width: 100%;
 }
 
-header > p:first-of-type {
+header > p:first-of-type, .menuItem {
 	padding-top: 5%;
 	text-align: center;
 	font: italic 300 1em 'Roboto Condensed', sans-serif;
@@ -56,6 +56,12 @@ nav li, h2 {
 	padding-top: 3%;
 	letter-spacing: 0.1em;
 	list-style: none;
+}
+
+h6 {
+	font: 400 0.75em 'Trirong', serif;
+	color: white;
+	text-align: center;
 }
 
 a {
@@ -113,6 +119,7 @@ nav::before, nav::after {
 
 /***** Hamburger menu *****/
 .hamburger {
+	background-color:#16365D;
 	display: block;
 	width: 50px;
 	height: 50px;
@@ -120,7 +127,7 @@ nav::before, nav::after {
 	top: 0;
 	left: 0;
 	z-index: 10000;
-	padding: 5%;
+	padding: 5% 0 0 3%;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -251,9 +258,37 @@ nav::before, nav::after {
 .menuGrid {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .menuItem {
-
+	flex: 100%;
+	max-width: 100%;
+	padding: 2%;
 }
+
+.menuItem img {
+	width: 100%;
+}
+
+.menuItem p:first-of-type {
+	font-weight: 700;
+}
+
 /*************** Menu End ***************/
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (min-width: 600px) {
+	.menuItem {
+		flex: 50%;
+		max-width: 50%;
+	}
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (min-width: 800px) {
+	.menuItem {
+		flex: 30%;
+		max-width: 30%;
+	}
+}
