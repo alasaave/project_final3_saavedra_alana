@@ -49,7 +49,7 @@ header > p:first-of-type {
 	color: white;
 }
 
-nav li {
+nav li, h2 {
 	font: 500 1.5em 'Trirong', serif;
 	color: white;
 	text-align: center;
@@ -93,7 +93,8 @@ nav::before, nav::after {
 	margin: 0 auto;
 	width: 80%;
 	padding: 3%;
-	border-bottom: 0.25px solid white;}
+	border-bottom: 0.25px solid white;
+}
 
 #hours :not(#sideNote) {
 	text-align: center;
@@ -243,3 +244,16 @@ nav::before, nav::after {
 .fat-nav li a {
 	text-decoration: none;
 }
+
+/*************** End Column 1 (business info) ***************/
+
+/*************** Menu Start ***************/
+.menuGrid {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.menuItem {
+
+}
+/*************** Menu End ***************/
