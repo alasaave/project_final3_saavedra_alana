@@ -89,14 +89,14 @@ nav::before, nav::after {
 	text-align: center;
 	color: #FFF200;
 	font: 300 1.5em 'Roboto Condensed', sans-serif;
-	padding: 17% 0 17% 0;
+	padding: 25% 0 25% 0;
 }
 
 /***** Phone number *****/
 #contactinfo :first-of-type {
 	font-weight: 700;
 	padding-bottom: 2%;
-	font-size: 1.375em;
+	font-size: 1.25em;
 	letter-spacing: 0.1em;
 	color: #FFF200;
 }
@@ -155,7 +155,7 @@ nav::before, nav::after {
 .hamburger__icon, .hamburger__icon::before, .hamburger__icon::after {
 	display: block;
 	width: 25px;
-	height: 2px;
+	height: 3px;
 	background-color: #FFFFFF;
 	-moz-transition-property: background-color, -moz-transform;
 	-o-transition-property: background-color, -o-transform;
