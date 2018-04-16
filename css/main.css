@@ -75,16 +75,6 @@ a {
 	text-decoration: none;
 }
 
-/* use for media queries
-nav::before, nav::after {
-	content: "";
-	display: block;
-	margin: 0 auto;
-	width: 80%;
-	padding: 3%;
-	border-bottom: 0.25px solid white;
-} */
-
 #contactinfo {
 	text-align: center;
 	color: #FFF200;
@@ -295,6 +285,10 @@ aside::after, aside::before {
 	border-bottom: 0.25px solid white;
 }
 
+p {
+	font-size: 1.2em;
+}
+
 /* Multilevel li */
 ul li ul {
 	color: red;
@@ -303,21 +297,50 @@ ul li ul {
 /****************************** Specials End ******************************/
 
 
-/****************************** Social End ******************************/
+/****************************** Social ******************************/
 #social {
 	padding-top: 10%;
 }
 
+/****************************** Media Queries ******************************/
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* Two columns */
 @media (min-width: 600px) {
+	body {
+		columns: 3 30px;
+		column-rule: 1px solid red;
+	}
+	header {
+		width: 100%;
+		height: 100vh;
+	}
+	main {
+		height: 100vh;
+		overflow-y: scroll;
+	}
+	nav::before, nav::after {
+		content: "";
+		display: block;
+		margin: 0 auto;
+		width: 80%;
+		padding: 3%;
+		border-bottom: 0.25px solid white;
+	}
+
+	#social {
+		overflow-y: scroll;
+		height: 100vh;
+	}
+	aside, .hamburger {
+		display: none;
+	}
 	.menuItem {
 		flex: 50%;
 		max-width: 50%;
 	}
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
+/* Three columns */
 @media (min-width: 800px) {
 	.menuItem {
 		flex: 30%;
