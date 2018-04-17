@@ -14,7 +14,7 @@ html {
 }
 
 body {
-	width: 95%;
+	width: 98%;
 	margin: auto;
 	font: 400 1em 'Roboto Condensed', sans-serif;
 }
@@ -307,43 +307,93 @@ ul li ul {
 /* Two columns */
 @media (min-width: 600px) {
 	body {
-		columns: 3 30px;
-		column-rule: 1px solid red;
+		display: flex;
+		column-count: 3;
+	}
+	header, main {
+		width: auto 0;
+		height: 100vh;
 	}
 	header {
-		width: 100%;
+		padding: 2%;
+		flex: 1;
+		width: 30%;
 		height: 100vh;
+		position: fixed;
+		border-right: 1px solid #D9C066;;
 	}
 	main {
-		height: 100vh;
+		position: absolute;
+		flex: 1;
+		margin: 0 0% 0 31%;
 		overflow-y: scroll;
+		width: 35%;
+		border-right: 1px solid #D9C066;;
 	}
+	#social {
+		padding-top: 5%;
+		flex: 1;
+		height: 100vh;
+		width: 30%;
+		right: 0;
+		position: fixed;
+	}
+
+	aside, .hamburger, #hours::before, #hours::after {
+		display: none;
+	}
+
+	.menuItem p {
+		font-size: 0.875em;
+	}
+
+	.menuItem {
+		flex: 50%;
+		max-width: 50%;
+	}
+
+	#contactinfo {
+		padding: 10% 0 10% 0;
+		font: 300 1em 'Roboto Condensed', sans-serif;
+	}
+
+	#contactinfo :first-of-type {
+		font-size: 1.375em;
+	}
+
+	nav a {
+		color: white;
+	}
+
 	nav::before, nav::after {
 		content: "";
 		display: block;
 		margin: 0 auto;
 		width: 80%;
-		padding: 3%;
+		padding: 1%;
 		border-bottom: 0.25px solid white;
 	}
 
-	#social {
-		overflow-y: scroll;
-		height: 100vh;
+	#hours :not(#sideNote) {
+		text-align: center;
+		font: 300 1.25em 'Roboto Condensed', sans-serif;
+		color: white;
+		letter-spacing: 0.1em;
 	}
-	aside, .hamburger {
-		display: none;
-	}
-	.menuItem {
-		flex: 50%;
-		max-width: 50%;
+
+	#sideNote {
+		padding: 10% 0 5% 0;
+		font-size: 0.875em;
 	}
 }
 
 /* Three columns */
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
 	.menuItem {
 		flex: 30%;
 		max-width: 30%;
+	}
+	.menuItem p {
+		font-size: 0.875em;
 	}
 }
