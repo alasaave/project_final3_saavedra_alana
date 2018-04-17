@@ -325,22 +325,15 @@ ul li ul {
 	main {
 		position: absolute;
 		flex: 1;
-		margin: 0 0% 0 31%;
+		margin: 0 0% 0 35%;
 		overflow-y: scroll;
-		width: 35%;
-		border-right: 1px solid #D9C066;;
+		width: 60%;
 	}
-	#social {
-		padding-top: 5%;
-		flex: 1;
-		height: 100vh;
-		width: 30%;
-		right: 0;
-		position: fixed;
+	.fb-page, .fb-page span, .fb-page span iframe[style] {
+		width: 100% !important;
 	}
-
-	aside, .hamburger, #hours::before, #hours::after {
-		display: none;
+	aside, #social, .hamburger, #hours::before, #hours::after {
+		visibility: hidden;
 	}
 
 	.menuItem p {
@@ -395,5 +388,23 @@ ul li ul {
 	}
 	.menuItem p {
 		font-size: 0.875em;
+	}
+	main {
+		position: absolute;
+		flex: 1;
+		margin: 0 0% 0 30%;
+		overflow-y: scroll;
+		width: 35%;
+		border-right: 1px solid #D9C066;;
+
+	}
+	#social {
+		visibility: visible;
+		padding-top: 5%;
+		flex: 1;
+		height: 100vh;
+		width: 30%;
+		right: 0;
+		position: fixed;
 	}
 }
