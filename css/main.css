@@ -317,25 +317,19 @@ ul li ul {
 	header {
 		padding: 2%;
 		flex: 1;
-		width: 30%;
+		width: 37%;
 		height: 100vh;
 		position: fixed;
 		border-right: 1px solid #D9C066;;
 	}
+
 	main {
 		position: absolute;
 		flex: 1;
-		margin: 0 0% 0 35%;
+		margin: 0 0% 0 38%;
 		overflow-y: scroll;
 		width: 60%;
 	}
-	.fb-page, .fb-page span, .fb-page span iframe[style] {
-		width: 100% !important;
-	}
-	aside, #social, .hamburger, #hours::before, #hours::after {
-		visibility: hidden;
-	}
-
 	.menuItem p {
 		font-size: 0.875em;
 	}
@@ -344,14 +338,17 @@ ul li ul {
 		flex: 50%;
 		max-width: 50%;
 	}
+	.fb-page, .fb-page span, .fb-page span iframe[style] {
+		width: 100% !important;
+	}
+	aside, #social, .hamburger, #hours::before, #hours::after {
+		visibility: hidden;
+	}
+
 
 	#contactinfo {
 		padding: 10% 0 10% 0;
 		font: 300 1em 'Roboto Condensed', sans-serif;
-	}
-
-	#contactinfo :first-of-type {
-		font-size: 1.375em;
 	}
 
 	nav a {
@@ -368,10 +365,7 @@ ul li ul {
 	}
 
 	#hours :not(#sideNote) {
-		text-align: center;
 		font: 300 1.25em 'Roboto Condensed', sans-serif;
-		color: white;
-		letter-spacing: 0.1em;
 	}
 
 	#sideNote {
@@ -380,24 +374,39 @@ ul li ul {
 	}
 }
 
+@media (min-width: 800px){
+	header {
+		width: 37%;
+	}
+	main {
+		margin: 0 0% 0 38%;
+		width: 60%;
+	}
+	#contactinfo :first-of-type {
+		font-size: 1.4em;
+	}
+}
+
+
 /* Three columns */
 @media (min-width: 1000px) {
-	.menuItem {
-		flex: 30%;
-		max-width: 30%;
-	}
-	.menuItem p {
-		font-size: 0.875em;
+
+	header {
+		width: 30%;
 	}
 	main {
 		position: absolute;
 		flex: 1;
-		margin: 0 0% 0 30%;
+		margin: 0 0% 0 31%;
 		overflow-y: scroll;
-		width: 35%;
+		width: 37%;
 		border-right: 1px solid #D9C066;;
-
 	}
+
+	.menuItem p {
+		font-size: 0.875em;
+	}
+
 	#social {
 		visibility: visible;
 		padding-top: 5%;
@@ -406,5 +415,18 @@ ul li ul {
 		width: 30%;
 		right: 0;
 		position: fixed;
+	}
+}
+@media (min-width: 1100px) {
+	.menuItem {
+		flex: 30%;
+		max-width: 30%;
+	}
+	main {
+		margin: 0 0% 0 30%;
+		width: 37%;
+	}
+	#social {
+		width: 30%;
 	}
 }
