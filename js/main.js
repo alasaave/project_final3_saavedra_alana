@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    //insert Facebook message into header using JS
+    //insert Facebook message into social div using JS
     //Using jQuery: $('<p id="sideNote">Check out our Facebook page for last minute changes!</p>').insertBefore('#hours');
 
     var checkMe = document.createElement('p');

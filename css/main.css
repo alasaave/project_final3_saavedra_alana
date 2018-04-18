@@ -374,7 +374,7 @@ ul li ul {
 	}
 }
 
-@media (min-width: 800px){
+@media (min-width: 800px) {
 	header {
 		width: 37%;
 	}
