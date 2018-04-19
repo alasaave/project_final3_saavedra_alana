@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     var checkMe = document.createElement('p');
 
-    checkMe.id = 'sideNote';
+    checkMe.className = 'sideNote';
     checkMe.innerText = '(Last orders taken 15 min before close)';
     document.getElementById('hours').appendChild(checkMe);
 

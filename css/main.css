@@ -101,14 +101,14 @@ a {
 	border-bottom: 0.25px solid white;
 }
 
-#hours :not(#sideNote) {
+#hours :not(.sideNote) {
 	text-align: center;
 	font: 300 1.5em 'Roboto Condensed', sans-serif;
 	color: white;
 	letter-spacing: 0.1em;
 }
 
-#sideNote {
+.sideNote {
 	text-decoration: none;
 	text-align: center;
 	padding: 5% 0 5% 0;
@@ -292,17 +292,12 @@ aside::before, aside::after {
 	border-bottom: 0.25px solid white;
 }
 
-aside ul{
+aside ul {
 	color: white;
 	font-weight: 300;
 	font-size: 1.25em;
 	text-align: center;
 	list-style: none;
-}
-
-aside ul::first-line {
-	content: '';
-	font-weight: 400;
 }
 
 /* Multilevel li */
@@ -327,25 +322,21 @@ aside ul li ul {
 	body {
 		display: flex;
 		column-count: 3;
-	}
-	header, main {
-		width: auto 0;
-		height: 100vh;
+		flex-flow: column nowrap;
 	}
 	header {
+		width: auto 0;
+		height: 100vh;
 		padding: 2%;
 		flex: 1;
 		width: 37%;
-		height: 100vh;
 		position: fixed;
 		border-right: 1px solid #D9C066;;
 	}
-	main {
-		position: absolute;
-		flex: 1;
-		margin: 0 0% 0 38%;
-		overflow-y: scroll;
+	main, aside, #social {
 		width: 60%;
+		flex-flow: column nowrap;
+		margin-left: 40%;
 	}
 	.menuItem p {
 		font-size: 0.875em;
@@ -357,7 +348,7 @@ aside ul li ul {
 	.fb-page, .fb-page span, .fb-page span iframe[style] {
 		width: 100% !important;
 	}
-	aside, .hamburger, #hours::before, #hours::after {
+	.hamburger, #hours::before, #hours::after {
 		visibility: hidden;
 	}
 	#contactinfo {
@@ -375,23 +366,16 @@ aside ul li ul {
 		padding: 1%;
 		border-bottom: 0.25px solid white;
 	}
-	#hours :not(#sideNote) {
+	#hours :not(.sideNote) {
 		font: 300 1.25em 'Roboto Condensed', sans-serif;
 	}
-	#sideNote {
+	.sideNote {
 		padding: 10% 0 5% 0;
 		font-size: 0.875em;
 	}
 }
 
 @media (min-width: 800px) {
-	header {
-		width: 37%;
-	}
-	main {
-		margin: 0 0% 0 38%;
-		width: 60%;
-	}
 	#contactinfo :first-of-type {
 		font-size: 1.35em;
 	}
@@ -404,25 +388,21 @@ aside ul li ul {
 		width: 30%;
 	}
 	main {
-		position: absolute;
-		flex: 1;
-		margin: 0 0% 0 31%;
+		margin-left: 31%;
+		flex-wrap: wrap;
 		overflow-y: scroll;
-		width: 37%;
+		width: 35%;
 		border-right: 1px solid #D9C066;;
+	}
+	aside, #social {
+		flex-wrap: nowrap;
+		width: 28%;
+		margin-left: 70%;
+		overflow-y: scroll;
 	}
 
 	.menuItem p {
 		font-size: 0.875em;
-	}
-
-	aside {
-		visibility: visible;
-		flex: 1;
-		height: 100vh;
-		width: 30%;
-		right: 0;
-		position: fixed;
 	}
 }
 @media (min-width: 1100px) {
