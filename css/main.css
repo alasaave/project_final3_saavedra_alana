@@ -49,11 +49,11 @@ header > p:first-of-type, .menuItem {
 	color: white;
 }
 
-nav li, h2 {
-	font: 500 1.5em 'Trirong', serif;
+h2 {
+	font: 500 2em 'Trirong', serif;
 	color: white;
 	text-align: center;
-	padding-top: 3%;
+	padding-top: 5%;
 	letter-spacing: 0.1em;
 	list-style: none;
 }
@@ -61,8 +61,9 @@ nav li, h2 {
 h3 {
 	text-align: center;
 	font: 300 1.5em 'Roboto Condensed', sans-serif;
-	color: white;
+	color: #FFEB3B;
 	letter-spacing: 0.1em;
+	padding-top: 4%;
 }
 
 .finePrint {
@@ -239,7 +240,9 @@ a {
 	list-style-type: none;
 	text-align: center;
 	padding: 3%;
-	font-size: 2em;
+	font: 500 2em 'Trirong', serif;
+	letter-spacing: 0.1em;
+	list-style-type: none;
 }
 
 .fat-nav li, .fat-nav li a {
@@ -276,22 +279,37 @@ a {
 /****************************** Menu/Column 2 End ******************************/
 
 /****************************** Specials Start ******************************/
-aside::after, aside::before {
+aside {
+	margin-top: 3%;
+}
+
+aside::before, aside::after {
 	content: "";
 	display: block;
 	margin: 0 auto;
 	width: 80%;
-	padding: 10%;
+	padding: 5%;
 	border-bottom: 0.25px solid white;
 }
 
-p {
-	font-size: 1.2em;
+aside ul{
+	color: white;
+	font-weight: 300;
+	font-size: 1.25em;
+	text-align: center;
+	list-style: none;
+}
+
+aside ul::first-line {
+	content: '';
+	font-weight: 400;
 }
 
 /* Multilevel li */
-ul li ul {
-	color: red;
+aside ul li ul {
+	font-style: italic;
+	font-size: 0.8em;
+	color: #607D8B;
 }
 
 /****************************** Specials End ******************************/
@@ -322,7 +340,6 @@ ul li ul {
 		position: fixed;
 		border-right: 1px solid #D9C066;;
 	}
-
 	main {
 		position: absolute;
 		flex: 1;
@@ -333,7 +350,6 @@ ul li ul {
 	.menuItem p {
 		font-size: 0.875em;
 	}
-
 	.menuItem {
 		flex: 50%;
 		max-width: 50%;
@@ -341,20 +357,16 @@ ul li ul {
 	.fb-page, .fb-page span, .fb-page span iframe[style] {
 		width: 100% !important;
 	}
-	aside, #social, .hamburger, #hours::before, #hours::after {
+	aside, .hamburger, #hours::before, #hours::after {
 		visibility: hidden;
 	}
-
-
 	#contactinfo {
 		padding: 10% 0 10% 0;
-		font: 300 1em 'Roboto Condensed', sans-serif;
+		font: 300 1.2em 'Roboto Condensed', sans-serif;
 	}
-
 	nav a {
 		color: white;
 	}
-
 	nav::before, nav::after {
 		content: "";
 		display: block;
@@ -363,11 +375,9 @@ ul li ul {
 		padding: 1%;
 		border-bottom: 0.25px solid white;
 	}
-
 	#hours :not(#sideNote) {
 		font: 300 1.25em 'Roboto Condensed', sans-serif;
 	}
-
 	#sideNote {
 		padding: 10% 0 5% 0;
 		font-size: 0.875em;
@@ -383,14 +393,13 @@ ul li ul {
 		width: 60%;
 	}
 	#contactinfo :first-of-type {
-		font-size: 1.4em;
+		font-size: 1.35em;
 	}
 }
 
 
 /* Three columns */
 @media (min-width: 1000px) {
-
 	header {
 		width: 30%;
 	}
@@ -407,9 +416,8 @@ ul li ul {
 		font-size: 0.875em;
 	}
 
-	#social {
+	aside {
 		visibility: visible;
-		padding-top: 5%;
 		flex: 1;
 		height: 100vh;
 		width: 30%;
@@ -418,13 +426,16 @@ ul li ul {
 	}
 }
 @media (min-width: 1100px) {
+	header {
+		width: 28%;
+	}
 	.menuItem {
 		flex: 30%;
 		max-width: 30%;
 	}
 	main {
-		margin: 0 0% 0 30%;
-		width: 37%;
+		margin: 0 0% 0 28%;
+		width: 39%;
 	}
 	#social {
 		width: 30%;
