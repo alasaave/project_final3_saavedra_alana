@@ -1,12 +1,13 @@
 $(document).ready(function () {
     //insert Facebook message into social div using JS
-    //Using jQuery: $('<p id="sideNote">Check out our Facebook page for last minute changes!</p>').insertBefore('#hours');
-
     var checkMe = document.createElement('p');
 
     checkMe.className = 'sideNote';
     checkMe.innerText = '(Last orders taken 15 min before close)';
     document.getElementById('hours').appendChild(checkMe);
+
+    //Add "Limited Time" to .featured cookies only
+    $('<p><strong>*LIMITED TIME ONLY*</strong></p>').appendTo('.menuItem.featured');
 
     //Call Hamburger Menu
     $.fatNav();

@@ -1,7 +1,7 @@
-(function($, window, document) {
+(function ($, window, document) {
 
     var pluginName = 'fatNav',
-    defaults = {};
+        defaults = {};
 
     function Plugin(options) {
         this.settings = $.extend({}, defaults, options);
@@ -12,7 +12,7 @@
 
     $.extend(Plugin.prototype, {
 
-        init: function() {
+        init: function () {
 
             var self = this;
             var $nav = this.$nav = $('.fat-nav');
@@ -32,32 +32,32 @@
 
             $('body').append($hamburger);
 
-            $().add($hamburger).add($nav.find('a')).on('click', function(e) {
+            $().add($hamburger).add($nav.find('a')).on('click', function (e) {
                 self.toggleNav();
             });
 
         },
 
-        toggleNav: function() {
+        toggleNav: function () {
 
             var self = this;
 
             this.$nav.fadeToggle(400);
 
-			self.toggleBodyOverflow();
+            self.toggleBodyOverflow();
 
             $().add(this.$hamburger).add(this.$nav).toggleClass('active');
         },
 
-        toggleBodyOverflow: function() {
+        toggleBodyOverflow: function () {
 
             var self = this;
 
-			var $body = $('body');
+            var $body = $('body');
 
             $body.toggleClass('no-scroll');
 
-			var isNavOpen = $body.hasClass('no-scroll');
+            var isNavOpen = $body.hasClass('no-scroll');
 
             $body.css('overflow', isNavOpen ? 'hidden' : self._bodyOverflow);
 
@@ -67,7 +67,7 @@
 
     if (typeof $[pluginName] === 'undefined') {
 
-        $[pluginName] = function(options) {
+        $[pluginName] = function (options) {
             return new Plugin(this, options);
         };
 

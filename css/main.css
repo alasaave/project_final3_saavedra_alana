@@ -87,6 +87,7 @@ a {
 	letter-spacing: 0.1em;
 	color: #FFF200;
 }
+
 #hours::before, #hours::after {
 	content: "";
 	display: block;
@@ -97,7 +98,7 @@ a {
 }
 
 #hours p:first-of-type {
-	padding-top:8%;
+	padding-top: 8%;
 }
 
 #hours :not(.sideNote) {
@@ -139,6 +140,16 @@ a {
 	font-weight: 700;
 }
 
+.featured {
+	color: #FFF200;
+}
+
+.extras {
+	background-color: #FFF200;
+	color: #16365D;
+	margin: 2% 0;
+}
+
 /****************************** Menu/Column 2 End ******************************/
 
 /****************************** Specials Start ******************************/
@@ -171,7 +182,7 @@ aside ul li ul, aside p:last-of-type {
 }
 
 aside p {
-	color:white;
+	color: white;
 }
 
 
@@ -183,6 +194,7 @@ aside p {
 	padding-top: 10%;
 	text-align: center;
 }
+
 /****************************** Social End ******************************/
 
 
@@ -193,6 +205,7 @@ aside p {
 
 /****************************** Media Queries ******************************/
 @media (max-width: 599px) {
+
 	/***** Hamburger menu *****/
 	.hamburger {
 		background-color: #16365D;
@@ -353,6 +366,7 @@ aside p {
 		flex-flow: column nowrap;
 		margin-left: 42%;
 	}
+
 	/***** Navigation *****/
 	.fat-nav ul {
 		vertical-align: middle;
@@ -451,15 +465,15 @@ aside p {
 }
 @media (min-width: 1100px) {
 	header {
-		width: 28%;
+		width: 27%;
 	}
-	.menuItem {
+	/* .menuItem {
 		flex: 30%;
 		max-width: 30%;
-	}
+	} */
 	main {
 		margin: 0 0% 0 28%;
-		width: 39%;
+		width: 40%;
 	}
 	#social {
 		width: 30%;
