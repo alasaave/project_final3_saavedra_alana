@@ -171,7 +171,7 @@ aside::before, aside::after {
 	border-bottom: 0.25px solid white;
 }
 
-aside ul {
+aside ul, h4 {
 	color: white;
 	font-weight: 300;
 	font-size: 1.25em;
@@ -215,7 +215,7 @@ footer a {
 
 /****************************** End Footer ******************************/
 
-/****************************** Jobs Page Start ******************************/
+/****************************** Jobs/About/FAQ Page Start ******************************/
 
 .fullPage ul li {
 	font-style: italic;
@@ -227,6 +227,12 @@ footer a {
 	padding:3%;
 }
 
+h4 {
+	padding:1%;
+	color: #D9C066;
+	font-size:1.2em;
+}
+
 .fullPage ul h3 {
 	text-align:left;
 	padding: 1%;
@@ -235,8 +241,12 @@ footer a {
 
 .fullPage p{
 	padding-top:1%;
+	font-weight:300;
+	line-height:1.4em;
 }
-/****************************** End Jobs Page ******************************/
+
+
+/****************************** End Jobs/About/FAQ Page ******************************/
 
 
 /****************************** Media Queries ******************************/
