@@ -171,7 +171,7 @@ aside::before, aside::after {
 	border-bottom: 0.25px solid white;
 }
 
-aside ul, h4 {
+aside ul {
 	color: white;
 	font-weight: 300;
 	font-size: 1.25em;
@@ -208,7 +208,7 @@ footer {
 	text-align: center;
 }
 
-footer a {
+footer a, .fullPage a {
 	text-decoration: underline;
 	color: #607D8B;
 }
@@ -216,35 +216,45 @@ footer a {
 /****************************** End Footer ******************************/
 
 /****************************** Jobs/About/FAQ Page Start ******************************/
+.fullPage {
+	padding-left: 1%;
+}
 
 .fullPage ul li {
 	font-style: italic;
 	color: #607D8B;
-	margin-left:5%;
+	margin-left: 5%;
 }
 
-.fullPage h3 {
-	padding:3%;
-}
-
-h4 {
-	padding:1%;
-	color: #D9C066;
-	font-size:1.2em;
+.fullPage h3, aside h3 {
+	padding: 5% 0 0 3%;
 }
 
 .fullPage ul h3 {
-	text-align:left;
+	text-align: left;
 	padding: 1%;
-	font-size:1em;
+	font-size: 1em;
 }
 
-.fullPage p{
-	padding-top:1%;
-	font-weight:300;
-	line-height:1.4em;
+.fullPage p {
+	padding-top: 1%;
+	font-weight: 300;
+	line-height: 1.4em;
 }
 
+.fullPage .menuItem {
+	padding: 0;
+	display: inline;
+	color: #607D8B;
+}
+
+h4 {
+	color: #D9C066;
+	text-align: center;
+	letter-spacing: 0;
+	padding: 1%;
+	font: 300 1.2em 'Roboto Condensed', sans-serif;
+}
 
 /****************************** End Jobs/About/FAQ Page ******************************/
 
@@ -407,7 +417,7 @@ h4 {
 		flex: 1;
 		width: 40%;
 		position: fixed;
-		border-right: 1px solid #D9C066;;
+		border-right: 1px solid #D9C066;
 	}
 	header img {
 		margin-top: 20%;
@@ -541,5 +551,8 @@ h4 {
 	}
 	#social {
 		width: 30%;
+	}
+	.fullPage {
+		padding-left: 0;
 	}
 }
