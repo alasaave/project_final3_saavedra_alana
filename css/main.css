@@ -363,6 +363,9 @@ footer {
 		position: fixed;
 		border-right: 1px solid #D9C066;;
 	}
+	header img {
+		margin-top: 20%;
+	}
 	main, aside, #social, footer {
 		width: 58%;
 		flex-flow: column nowrap;
@@ -445,9 +448,7 @@ footer {
 /* Three columns */
 @media (min-width: 1000px) {
 	body {
-		display: flex;
-		column-count: 3;
-		flex-flow: column nowrap;
+		position: relative;
 	}
 	header {
 		width: 30%;
@@ -455,18 +456,21 @@ footer {
 	main {
 		height: 100vh;
 		margin-left: 31%;
-		flex-wrap: wrap;
+		position: absolute;
 		overflow-y: scroll;
 		width: 35%;
 		border-right: 1px solid #D9C066;;
 	}
-	aside, #social {
-		flex-wrap: nowrap;
+	#right {
+		height: 100vh;
+		margin-left: 70%;
+		position: fixed;
+	}
+	aside, #social, footer {
 		width: 28%;
 		margin-left: 70%;
-		overflow-y: scroll;
+		flex-flow: column nowrap;
 	}
-
 	.menuItem p {
 		font-size: 0.875em;
 	}
