@@ -32,147 +32,8 @@ body {
 }
 
 /****************************** Navigation ******************************/
-
-/***** Hamburger menu box w/ padding *****/
-.hamburger {
-	background-color: #16365D;
-	display: block;
-	width: 50px;
-	height: 50px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	padding: 7% 10% 7% 5%;
-	z-index: 10000;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-tap-highlight-color: transparent;
-	-webkit-tap-highlight-color: transparent;
-	-ms-touch-action: manipulation;
-	touch-action: manipulation;
-}
-
-/***** Hamburger menu lines positioning *****/
-.hamburger__icon {
-	position: relative;
-	margin-top: 3%;
-	margin-bottom: 3%;
-}
-
-/***** Lines of hamburger *****/
-.hamburger__icon, .hamburger__icon::before, .hamburger__icon::after {
-	display: block;
-	width: 25px;
-	height: 3px;
-	background-color: #FFFFFF;
-	-moz-transition-property: background-color, -moz-transform;
-	-o-transition-property: background-color, -o-transform;
-	-webkit-transition-property: background-color, -webkit-transform;
-	transition-property: background-color, transform;
-	-moz-transition-duration: 0.4s;
-	-o-transition-duration: 0.4s;
-	-webkit-transition-duration: 0.4s;
-	transition-duration: 0.4s;
-}
-
-.hamburger__icon::before, .hamburger__icon::after {
-	position: absolute;
-	content: "";
-}
-
-.hamburger__icon::before {
-	top: -7px;
-}
-
-.hamburger__icon::after {
-	top: 7px;
-}
-
-/***** Middle line of hamburger when menu is open *****/
-.hamburger.active .hamburger__icon {
-	background-color: transparent;
-}
-
-/***** Menu transform *****/
-.hamburger.active .hamburger__icon::before {
-	-moz-transform: translateY(7px) rotate(45deg);
-	-ms-transform: translateY(7px) rotate(45deg);
-	-webkit-transform: translateY(7px) rotate(45deg);
-	transform: translateY(7px) rotate(45deg);
-}
-
-.hamburger.active .hamburger__icon::after {
-	-moz-transform: translateY(-7px) rotate(-45deg);
-	-ms-transform: translateY(-7px) rotate(-45deg);
-	-webkit-transform: translateY(-7px) rotate(-45deg);
-	transform: translateY(-7px) rotate(-45deg);
-}
-
-/***** Menu background when open *****/
-.fat-nav {
-	top: 0;
-	left: 0;
-	z-index: 9999;
-	position: fixed;
-	visibility: hidden;
-	width: 100%;
-	height: 100%;
-	background: #16365D;
-	-moz-transform: scale(1.4);
-	-ms-transform: scale(1.4);
-	-webkit-transform: scale(1.4);
-	transform: scale(1.4);
-	-moz-transition-property: -moz-transform;
-	-o-transition-property: -o-transform;
-	-webkit-transition-property: -webkit-transform;
-	transition-property: transform;
-	-moz-transition-duration: 0.4s;
-	-o-transition-duration: 0.4s;
-	-webkit-transition-duration: 0.4s;
-	transition-duration: 0.4s;
-	overflow-y: auto;
-	overflow-x: auto;
-	-webkit-overflow-scrolling: touch;
-}
-
-/***** Wraps nav when open *****/
-.fat-nav__wrapper {
-	width: 100%;
-	height: 100%;
-	display: table;
-	table-layout: fixed;
-}
-
-.fat-nav.active {
-	-moz-transform: scale(1);
-	-ms-transform: scale(1);
-	-webkit-transform: scale(1);
-	transform: scale(1);
-}
-
-.fat-nav ul {
-	display: table-cell;
-	vertical-align: middle;
-	margin: 0;
-	padding: 0;
-}
-
-.fat-nav li {
-	list-style-type: none;
-	text-align: center;
-	padding: 3%;
-	font: 500 2em 'Trirong', serif;
-	letter-spacing: 0.1em;
-	list-style-type: none;
-}
-
-.fat-nav li, .fat-nav li a {
-	color: #FFFFFF;
-}
-
-.fat-nav li a {
-	text-decoration: none;
+nav li a {
+	color: white;
 }
 
 /****************************** Column 1 (business info) ******************************/
@@ -193,7 +54,7 @@ header > p:first-of-type, .menuItem {
 	color: #FFFFFF;
 }
 
-h2 {
+h2, nav li {
 	font: 500 2em 'Trirong', serif;
 	color: white;
 	text-align: center;
@@ -439,30 +300,8 @@ h4 {
 	.fb-page, .fb-page span, .fb-page span iframe[style] {
 		width: 100% !important;
 	}
-	#hours::before, #hours::after, .hamburger {
+	#hours::before, #hours::after {
 		visibility: hidden;
-	}
-	.fat-nav {
-		position: relative;
-		visibility: visible;
-		height: auto;
-		width: 100%;
-		background: transparent;
-		-moz-transform: scale(1);
-		-ms-transform: scale(1);
-		-webkit-transform: scale(1);
-		transform: scale(1);
-	}
-	.fat-nav li {
-		padding: 1%;
-		font: 500 1.75em 'Trirong', serif;
-	}
-	#contactinfo {
-		padding: 10% 0 10% 0;
-		font: 300 1.2em 'Roboto Condensed', sans-serif;
-	}
-	nav a {
-		color: white;
 	}
 	nav::before, nav::after {
 		content: "";
@@ -472,7 +311,12 @@ h4 {
 		padding: 1%;
 		border-bottom: 0.25px solid white;
 	}
+	#contactinfo {
+		padding: 10% 0 10% 0;
+		font: 300 1.2em 'Roboto Condensed', sans-serif;
+	}
 	#hours :not(.sideNote) {
+		color: #FFF200;
 		font: 300 1.25em 'Roboto Condensed', sans-serif;
 	}
 	.sideNote {
@@ -490,9 +334,6 @@ h4 {
 	}
 	#contactinfo :first-of-type {
 		font-size: 1.35em;
-	}
-	.fat-nav li {
-		padding: 0%;
 	}
 }
 
@@ -516,12 +357,11 @@ h4 {
 	#rightColumn {
 		height: 100vh;
 		margin-left: 70%;
-		position: fixed;
+		position: absolute;
 	}
 	aside, #social, footer {
 		width: 28%;
 		margin-left: 70%;
-		flex-flow: column nowrap;
 	}
 	.menuItem p {
 		font-size: 0.875em;
@@ -556,5 +396,10 @@ h4 {
 	}
 	.fullPage {
 		padding-left: 0;
+	}
+}
+@media (min-width: 1200px) {
+	.menuItem p {
+		font-size: 1em;
 	}
 }

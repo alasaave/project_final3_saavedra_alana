@@ -10,7 +10,7 @@ $(document).ready(function () {
     $('<p><strong>*LIMITED TIME ONLY*</strong></p>').appendTo('.menuItem.featured');
 
     //Call Hamburger Menu
-    $.fatNav();
+
 
     //social Feed
     //Facebook sdk
