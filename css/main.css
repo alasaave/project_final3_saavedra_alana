@@ -32,8 +32,121 @@ body {
 }
 
 /****************************** Navigation ******************************/
-nav li a {
-	color: white;
+body.mmactive {
+	overflow: hidden;
+}
+
+.mobile_menu {
+	display: none;
+	position: relative;
+}
+
+.sm_menu_outer.active .mobile_menu {
+	display: block;
+}
+
+/* nav background */
+.sm_menu_outer {
+	height: calc(100vh);
+	overflow-y: scroll;
+	overflow-x: hidden;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	opacity: 0;
+	background-color: #16365D;
+	-webkit-transition: opacity 0.2s;
+	-moz-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+}
+
+/* nav order */
+.sm_menu_outer.active {
+	opacity: 1;
+	z-index: 999;
+}
+
+/* nav text */
+.sm_menu_outer .mobile_menu a {
+	display: block;
+	padding-top: 15%;
+	text-transform: uppercase;
+}
+
+/* nav background */
+#sm_menu_ham {
+	cursor: pointer;
+	height: 5%;
+	position: fixed;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: all 0.5s ease-in-out 0s;
+	-moz-transition: all 0.5s ease-in-out 0s;
+	-o-transition: all 0.5s ease-in-out 0s;
+	transition: all 0.5s ease-in-out 0s;
+	width: 60px;
+	background-color: #16365D;
+	top: 3%;
+	left: 2%;
+	z-index: 9999;
+}
+
+/* lines of hamburger nav */
+#sm_menu_ham span {
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	display: block;
+	height: 2px;
+	left: 30%;
+	opacity: 1;
+	position: absolute;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: all 0.25s ease-in-out 0s;
+	-moz-transition: all 0.25s ease-in-out 0s;
+	-o-transition: all 0.25s ease-in-out 0s;
+	transition: all 0.25s ease-in-out 0s;
+	width: 30px;
+}
+
+#sm_menu_ham span:nth-child(1) {
+	top: 20%;
+}
+
+#sm_menu_ham span:nth-child(2),
+#sm_menu_ham span:nth-child(3) {
+	top: 40%;
+}
+
+#sm_menu_ham span:nth-child(4) {
+	top: 60%;
+}
+
+#sm_menu_ham.open span:nth-child(1) {
+	left: 50%;
+	top: 18px;
+	width: 0;
+}
+
+#sm_menu_ham.open span:nth-child(2) {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+#sm_menu_ham.open span:nth-child(3) {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+#sm_menu_ham.open span:nth-child(4) {
+	left: 50%;
+	top: 18px;
+	width: 0;
 }
 
 /****************************** Column 1 (business info) ******************************/
@@ -54,7 +167,7 @@ header > p:first-of-type, .menuItem {
 	color: #FFFFFF;
 }
 
-h2, nav li {
+h2, .mobile_menu a  {
 	font: 500 2em 'Trirong', serif;
 	color: white;
 	text-align: center;
@@ -285,6 +398,11 @@ h4 {
 	header img {
 		margin-top: 20%;
 	}
+
+	/***** Hamburger MENU *****/
+	#sm_menu_ham, .sm_menu_outer {
+		display: none;
+	}
 	main, aside, #social, .fullPage, footer {
 		width: 58%;
 		flex-flow: column nowrap;
@@ -356,13 +474,18 @@ h4 {
 	}
 	#rightColumn {
 		height: 100vh;
-		margin-left: 70%;
+		margin-left: 67%;
+		width: 38%;
 		position: absolute;
+		overflow-y: scroll;
+		text-align: center;
 	}
-	aside, #social, footer {
-		width: 28%;
-		margin-left: 70%;
+	aside, #social {
+		width: 100%;
+		margin-left: 0;
+		overflow-x: hidden;
 	}
+
 	.menuItem p {
 		font-size: 0.875em;
 	}
@@ -391,7 +514,8 @@ h4 {
 		margin: 0 0% 0 28%;
 		width: 40%;
 	}
-	#social {
+	#rightColumn {
+		margin-left: 70%;
 		width: 30%;
 	}
 	.fullPage {
