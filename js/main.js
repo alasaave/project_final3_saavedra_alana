@@ -19,7 +19,7 @@ $(document).ready(function () {
     //Plugin 1: Call hamburger nav
     $('nav ul').menu({
         menuSpeed: 10,
-        callback: function () {}
+        callback: function () { /* Empty */ }
     });
 
     //Plugin 2: Facebook Social Feed

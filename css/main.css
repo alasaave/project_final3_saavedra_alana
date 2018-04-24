@@ -457,11 +457,11 @@ h4 {
 		margin-left: 0;
 		overflow-x: hidden;
 	}
-	footer{
+	footer {
 		margin-left: 33%;
 	}
 	#rightColumn footer {
-		margin-left:0;
+		margin-left: 0;
 	}
 	.menuItem p {
 		font-size: 0.875em;
