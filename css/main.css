@@ -32,121 +32,61 @@ body {
 }
 
 /****************************** Navigation ******************************/
-body.mmactive {
-	overflow: hidden;
+
+/* hamburger menu img */
+.re-order {
+	cursor: pointer;
+	position: fixed;
+	z-index: 9999;
+	top: 1%;
+	left: 2%;
+	width: 32px;
+	background-color: #16365D;
+	padding: 1%;
 }
 
-.mobile_menu {
-	display: none;
-	position: relative;
-}
-
-.sm_menu_outer.active .mobile_menu {
+nav a {
 	display: block;
+	padding: 10%;
+	color: #FFFFFF;
+	-webkit-transition-property: background-color;
+	-moz-transition-property: background-color;
+	-o-transition-property: background-color;
+	transition-property: background-color;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-webkit-transition-timing-function: ease;
+	-moz-transition-timing-function: ease;
+	-o-transition-timing-function: ease;
+	transition-timing-function: ease;
 }
 
-/* nav background */
-.sm_menu_outer {
-	height: calc(100vh);
+nav a:hover {
+	background: #FFF200;
+	color: #16365D;
+}
+
+nav ul {
+	display: none;
+	text-align: center;
+
+	/* full background */
+	z-index: 999;
+	height: 100vh;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	position: fixed;
+	padding-top: 15%;
 	right: 0;
 	bottom: 0;
 	width: 100%;
-	opacity: 0;
 	background-color: #16365D;
-	-webkit-transition: opacity 0.2s;
-	-moz-transition: opacity 0.2s;
-	transition: opacity 0.2s;
 }
 
-/* nav order */
-.sm_menu_outer.active {
-	opacity: 1;
-	z-index: 999;
-}
-
-/* nav text */
-.sm_menu_outer .mobile_menu a {
+nav ul.open {
 	display: block;
-	padding-top: 15%;
-	text-transform: uppercase;
-}
-
-/* nav background */
-#sm_menu_ham {
-	cursor: pointer;
-	height: 5%;
-	position: fixed;
-	-webkit-transform: rotate(0deg);
-	-moz-transform: rotate(0deg);
-	transform: rotate(0deg);
-	-webkit-transition: all 0.5s ease-in-out 0s;
-	-moz-transition: all 0.5s ease-in-out 0s;
-	-o-transition: all 0.5s ease-in-out 0s;
-	transition: all 0.5s ease-in-out 0s;
-	width: 60px;
-	background-color: #16365D;
-	top: 3%;
-	left: 2%;
-	z-index: 9999;
-}
-
-/* lines of hamburger nav */
-#sm_menu_ham span {
-	background-color: #FFFFFF;
-	border-radius: 5px;
-	display: block;
-	height: 2px;
-	left: 30%;
-	opacity: 1;
-	position: absolute;
-	-webkit-transform: rotate(0deg);
-	-moz-transform: rotate(0deg);
-	transform: rotate(0deg);
-	-webkit-transition: all 0.25s ease-in-out 0s;
-	-moz-transition: all 0.25s ease-in-out 0s;
-	-o-transition: all 0.25s ease-in-out 0s;
-	transition: all 0.25s ease-in-out 0s;
-	width: 30px;
-}
-
-#sm_menu_ham span:nth-child(1) {
-	top: 20%;
-}
-
-#sm_menu_ham span:nth-child(2),
-#sm_menu_ham span:nth-child(3) {
-	top: 40%;
-}
-
-#sm_menu_ham span:nth-child(4) {
-	top: 60%;
-}
-
-#sm_menu_ham.open span:nth-child(1) {
-	left: 50%;
-	top: 18px;
-	width: 0;
-}
-
-#sm_menu_ham.open span:nth-child(2) {
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-
-#sm_menu_ham.open span:nth-child(3) {
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-}
-
-#sm_menu_ham.open span:nth-child(4) {
-	left: 50%;
-	top: 18px;
-	width: 0;
 }
 
 /****************************** Column 1 (business info) ******************************/
@@ -167,7 +107,7 @@ header > p:first-of-type, .menuItem {
 	color: #FFFFFF;
 }
 
-h2, .mobile_menu a  {
+h2, nav a {
 	font: 500 2em 'Trirong', serif;
 	color: white;
 	text-align: center;
@@ -399,9 +339,26 @@ h4 {
 		margin-top: 20%;
 	}
 
-	/***** Hamburger MENU *****/
-	#sm_menu_ham, .sm_menu_outer {
+	/* navigation */
+	.re-order {
 		display: none;
+	}
+	nav ul {
+		display: block;
+
+		/* full background */
+		z-index: 999999;
+		position: relative;
+		height: auto;
+		padding-top: 0;
+	}
+	nav ul li {
+		display: block;
+		position: relative;
+		font-size: 0.75em;
+	}
+	nav a {
+		padding: 1%;
 	}
 	main, aside, #social, .fullPage, footer {
 		width: 58%;
@@ -448,13 +405,12 @@ h4 {
 		margin-top: 10%;
 	}
 	#hours p:first-of-type {
-		padding-top: 2%;
+		padding-top: 1%;
 	}
 	#contactinfo :first-of-type {
 		font-size: 1.35em;
 	}
 }
-
 
 /* Three columns */
 @media (min-width: 1000px) {
@@ -464,13 +420,16 @@ h4 {
 	header {
 		width: 30%;
 	}
+	nav ul li {
+		font-size: 0.875em;
+	}
 	main {
 		height: 100vh;
 		margin-left: 31%;
 		position: absolute;
 		overflow-y: scroll;
 		width: 35%;
-		border-right: 1px solid #D9C066;;
+		border-right: 1px solid #D9C066;
 	}
 	#rightColumn {
 		height: 100vh;
@@ -536,5 +495,10 @@ h4 {
 	}
 	footer {
 		margin-top: 65%;
+	}
+}
+@media (min-width: 1300px) {
+	footer {
+		margin-top: 59%;
 	}
 }

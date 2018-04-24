@@ -9,24 +9,11 @@ $(document).ready(function () {
     //Add "Limited Time" to .featured cookies only
     $('<p><strong>*LIMITED TIME ONLY*</strong></p>').appendTo('.menuItem.featured');
 
-    //Call Hamburger Menu
-    $('.mobile_menu').slideMobileMenu({
-        // Hamburger Id
-        'hamburgerId': 'sm_menu_ham',
-        // Menu Wrapper Class
-        'wrapperClass': 'sm_menu_outer',
-        // Submenu Class
-        'submenuClass': 'submenu',
-        // Calls when menu loaded
-        'onMenuLoad': function () {
-            return true;
-        },
-        // Calls when menu open/close
-        'onMenuToggle': function () {
-            return true;
-        }
+    //Call hamburger nav
+    $('nav ul').menu({
+        menuSpeed: 10,
+        callback: function () {}
     });
-
 
     //social Feed
     //Facebook sdk
