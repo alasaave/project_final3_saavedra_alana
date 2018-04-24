@@ -91,7 +91,7 @@ nav ul.open {
 
 /****************************** Column 1 (business info) ******************************/
 header main {
-	width: auto 0;
+	margin: auto 0;
 	height: 100vh;
 }
 
@@ -334,7 +334,7 @@ h4 {
 		flex-flow: column nowrap;
 	}
 	header {
-		width: auto 0;
+		margin: auto 0;
 		height: 100vh;
 		padding: 2%;
 		flex: 1;
