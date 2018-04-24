@@ -14,7 +14,7 @@ html {
 }
 
 body {
-	width: 98%;
+	width: 94%;
 	margin: auto;
 	font: 400 1em 'Roboto Condensed', sans-serif;
 }
@@ -196,7 +196,7 @@ a {
 }
 
 .menuItem p {
-	font-size: 1.5em;
+	font-size: 1.2em;
 }
 
 .menuItem p:first-of-type {
@@ -322,6 +322,7 @@ h4 {
 /* Two columns */
 @media (min-width: 600px) {
 	body {
+		width: 98%;
 		display: flex;
 		column-count: 2;
 		flex-flow: column nowrap;
@@ -356,6 +357,9 @@ h4 {
 		display: block;
 		position: relative;
 		font-size: 0.75em;
+	}
+	nav ul li.parent ul {
+		display: none;
 	}
 	nav a {
 		padding: 1%;
