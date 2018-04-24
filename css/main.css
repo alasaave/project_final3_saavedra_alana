@@ -501,4 +501,16 @@ h4 {
 	footer {
 		margin-top: 59%;
 	}
+	#contactinfo {
+		padding: 5% 0 5% 0;
+	}
+	#contactinfo :first-of-type {
+		font-size: 1.25em;
+	}
+	nav ul li {
+		font-size: 0.75em;
+	}
+	.sideNote {
+		padding: 5% 0 5% 0;
+	}
 }
